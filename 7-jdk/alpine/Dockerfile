@@ -4,7 +4,7 @@
 # PLEASE DO NOT EDIT IT DIRECTLY.
 #
 
-FROM alpine:3.4
+FROM owlab/alpine-arm64:edge
 
 # A few problems with compiling Java from source:
 #  1. Oracle.  Licensing prevents us from redistributing the official JDK.
@@ -26,8 +26,8 @@ RUN { \
 ENV JAVA_HOME /usr/lib/jvm/java-1.7-openjdk
 ENV PATH $PATH:/usr/lib/jvm/java-1.7-openjdk/jre/bin:/usr/lib/jvm/java-1.7-openjdk/bin
 
-ENV JAVA_VERSION 7u91
-ENV JAVA_ALPINE_VERSION 7.91.2.6.3-r2
+ENV JAVA_VERSION 7u111
+ENV JAVA_ALPINE_VERSION 7.111.2.6.7-r2
 
 RUN set -x \
 	&& apk add --no-cache \
